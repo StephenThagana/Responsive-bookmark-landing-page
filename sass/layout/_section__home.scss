@@ -5,7 +5,8 @@
 .hero {
   // justify-items: center;
   &-desc {
-    padding: 0 3.2rem;
+    padding: 0 0 0 7.2rem;
+    margin-top: 3.2rem;
   }
   &-text {
     font-size: 1.6rem;
@@ -13,21 +14,30 @@
     margin-bottom: 3.2rem;
   }
   &-img-box {
-    // display: flex;
-    // justify-content: flex-end;
-    // overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  &-img-box::before {
+    content: "";
+    display: block;
+    width: 80%;
+    //  height cant work i prefer padding
+    // height: 60%;
+    // 60% 0f parents width
+    padding-bottom: 35%;
+    background-color: var(--color-Soft-Blue);
+    border-radius: 30rem;
+
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    z-index: -1;
   }
 
   &-img {
     width: 80%;
-  }
-  &-img::before {
-    content: "";
-    display: block;
-    width: 60%;
-    //  height cant work i prefer padding
-    // height: 60%;
-    padding-bottom: 60%;
-    background-color: var(--color-Soft-Blue);
   }
 }
