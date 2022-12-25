@@ -1,0 +1,33 @@
+.section__home {
+  grid-column: full-start / full-end;
+  padding: var(--section-padding);
+}
+.hero {
+  // justify-items: center;
+  &-desc {
+    padding: 0 3.2rem;
+  }
+  &-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3.2rem;
+  }
+  &-img-box {
+    // display: flex;
+    // justify-content: flex-end;
+    // overflow: hidden;
+  }
+
+  &-img {
+    width: 80%;
+  }
+  &-img::before {
+    content: "";
+    display: block;
+    width: 60%;
+    //  height cant work i prefer padding
+    // height: 60%;
+    padding-bottom: 60%;
+    background-color: var(--color-Soft-Blue);
+  }
+}

@@ -1,0 +1,63 @@
+///////////////////////////
+///BASIC RESET
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // default browser font size = 16px so 10/16 =  62.5%
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  // padding: 7.2rem 0;
+}
+.grid {
+  display: grid;
+  gap: 3.2rem;
+}
+.grid-col--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-col--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-col--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+///////////////////
+/// BODY GRID
+
+.main-grid {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(min-content, 14rem) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(min-content, 14rem) [full-end];
+
+  // temp
+  height: 50rem;
+}
+
+// .main__grid {
+//   display: grid;
+//   grid-template-columns:
+//     [full-start] minmax(14rem, 1fr) [center-start] repeat(
+//       8,
+//       [col-start] minmax(min-content, 14rem) [col-end]
+//     )
+//     [center-end] minmax(14rem, 1fr) [full-end];

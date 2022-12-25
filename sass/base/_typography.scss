@@ -1,0 +1,21 @@
+body {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-Grayish-Blue);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 500;
+  color: var(--Very-Dark-Blue);
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
