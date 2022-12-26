@@ -1,27 +1,29 @@
 "use strict";
 
-// const Person = function (firstName, birthYear) {
-//   this.firstName = firstName;
-//   this.birthYear = birthYear;
-// };
+//BOOKMARK TABBED COMPONENT
+const tabs = document.querySelectorAll(".bookmark__tab");
+// bookmark container
+const tabsContainer = document.querySelector(".features__menu-list");
+const tabsContent = document.querySelectorAll(".menu__content-desc");
 
-// const jonas = new Person("jonas", 1991);
-// console.log(jonas);
+tabsContainer.addEventListener("click", function (e) {
+  e.preventDefault();
+  const clicked = e.target.closest(".bookmark__tab");
+  // Guard clause
+  if (!clicked) return;
+  // remove tab
+  tabs.forEach(function (t) {
+    t.classList.remove("bookmark__tab--active");
+  });
+  // remove bookmark area
+  tabsContent.forEach(function (c) {
+    c.classList.remove("bookmark__content-active");
+  });
+  // activete tab
+  clicked.classList.add("bookmark__tab--active");
 
-// //prototypes
-// console.log(Person.prototype);
-// Person.prototype.calcAge = function () {
-//   console.log(2037 - this.birthYear);
-// };
-// jonas.calcAge();
-const Car = function (make, speed) {
-  this.make = make;
-  this.speed = speed;
-};
-
-Car.prototype.accelerate = function () {
-  this.speed += 10;
-  console.log(`${this.make} is going at ${this.speed} km/h`);
-};
-const bmw = new Car("BMW", 120);
-bmw.accelerate();
+  // activate content area
+  const book = document
+    .querySelector(`.bookmark__content--${clicked.dataset.tab}`)
+    .classList.add("bookmark__content-active");
+});

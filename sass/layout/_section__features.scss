@@ -13,11 +13,10 @@
     align-items: center;
     justify-content: center;
     gap: 7.2rem;
-    padding: 1.2rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
   &-item {
+    border-bottom: 2px solid transparent;
   }
 }
 
@@ -45,8 +44,22 @@
 
   &-desc {
     padding: 5.2rem;
+    // display: none; animations cant work with display none
+    display: none;
   }
 }
 .menu-img {
   width: 80%;
+}
+// FEATURES TABBED COMPONENT
+.bookmark__tab--active {
+  border-bottom: 2px solid var(--color-Soft-Red);
+}
+.bookmark__content-active {
+  display: block;
+  // opacity: 1;
+  // // hide from jeyboard and mouse events
+  // pointer-events: auto;
+  // // hide it from screen readers
+  // visibility: visible;
 }
