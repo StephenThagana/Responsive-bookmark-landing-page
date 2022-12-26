@@ -1,6 +1,7 @@
 "use strict";
-
+////////////////////////////////
 //BOOKMARK TABBED COMPONENT
+
 const tabs = document.querySelectorAll(".bookmark__tab");
 // bookmark container
 const tabsContainer = document.querySelector(".features__menu-list");
@@ -23,7 +24,30 @@ tabsContainer.addEventListener("click", function (e) {
   clicked.classList.add("bookmark__tab--active");
 
   // activate content area
-  const book = document
+  document
     .querySelector(`.bookmark__content--${clicked.dataset.tab}`)
     .classList.add("bookmark__content-active");
+});
+
+////////////////////////////////
+// TABBED COMPONENT FOR THE FAQ SECTION
+
+const tabLink = document.querySelectorAll(".faq-item");
+const linkContent = document.querySelectorAll(".answer__content");
+
+tabLink.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const clicked = e.target.closest(".faq-item");
+
+    const answContent = clicked
+      .closest(".faq-box")
+      .querySelector(".answer__content");
+    answContent.classList.toggle("answer__content--active");
+
+    linkContent.forEach(function (content) {
+      if (content !== answContent)
+        content.classList.remove("answer__content--active");
+    });
+  });
 });

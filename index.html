@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/scripts.js"></script>
 
@@ -194,7 +202,7 @@
         </p>
       </div>
       <div class="faq">
-        <div class="faq__box">
+        <div class="faq-box">
           <ul class="faq-list">
             <li class="faq-item" data-tab="1">
               <a href="#" class="faq-link">What is Bookmark?</a>
@@ -208,7 +216,7 @@
             </p>
           </div>
         </div>
-        <div class="faq__box">
+        <div class="faq-box">
           <ul class="faq-list">
             <li class="faq-item" data-tab="2">
               <a href="#" class="faq-link">How can I request a new browser?</a>
@@ -225,10 +233,12 @@
             </p>
           </div>
         </div>
-        <div class="faq__box">
+        <div class="faq-box">
           <ul class="faq-list">
             <li class="faq-item" data-tab="3">
               <a href="#" class="faq-link">Is there a mobile app?</a>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+              <ion-icon name="chevron-up-outline"></ion-icon>
             </li>
           </ul>
           <div class="answer__content answer__content--3">
@@ -240,7 +250,7 @@
             </p>
           </div>
         </div>
-        <div class="faq__box">
+        <div class="faq-box">
           <ul class="faq-list">
             <li class="faq-item" data-tab="4">
               <a href="#" class="faq-link"
@@ -256,6 +266,7 @@
             </p>
           </div>
         </div>
+        <a href="#" class="btn btn--full btn--faq">More info</a>
       </div>
     </section>
 
