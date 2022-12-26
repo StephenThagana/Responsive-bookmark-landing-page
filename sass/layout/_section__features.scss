@@ -27,6 +27,7 @@
     align-items: center;
     justify-content: flex-end;
     position: relative;
+    overflow: hidden;
 
     &::before {
       content: "";

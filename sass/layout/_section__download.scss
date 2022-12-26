@@ -1,4 +1,35 @@
 .section__download {
   grid-column: center-start / center-end;
-  background-color: brown;
+  padding: var(--section-padding);
+}
+.download__text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 7.2rem;
+}
+.extension {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3.2rem;
+  padding: 0 3.2rem;
+}
+.extension-item {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.15);
+  padding: 2.4rem;
+  border-radius: 9px;
+}
+.extension-desc {
+  padding-bottom: 4.8rem;
+  text-align: center;
+}
+.extension-img {
+  // width: 3.25rem;
+  height: 8.25rem;
+  margin-bottom: 2.4rem;
+}
+.extension-text {
 }

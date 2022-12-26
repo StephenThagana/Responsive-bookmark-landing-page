@@ -1,9 +1,10 @@
 .section__home {
   grid-column: full-start / full-end;
-  padding: var(--section-padding);
 }
 .hero {
   // justify-items: center;
+  padding: 5.6rem 0 7.2rem 0;
+
   &-desc {
     padding: 0 0 0 7.2rem;
     margin-top: 3.2rem;
