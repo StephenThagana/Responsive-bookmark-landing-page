@@ -18,6 +18,8 @@ Thanks for checking out.
 
 A: Sure! Here you go [Bookmark landing page](https://Responsive-bookmark-page.netlify.app)
 
-## Author
+## Created by:
+
+Stephen Thagana
 
 - Website - [Stephen thagana](https://www.stephen-thagana.netlify.app)
