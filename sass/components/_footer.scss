@@ -1,4 +1,38 @@
 .section__footer {
   grid-column: full-start / full-end;
-  background-color: green;
+  background-color: var(--Very-Dark-Blue);
+  padding: 3.2rem 9.6rem;
+}
+.footer {
+  &-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 7.2rem;
+  }
+  &-img {
+    filter: invert(1) hue-rotate(177deg);
+  }
+  &-list {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+  }
+  &-item {
+  }
+  &-social {
+    display: flex;
+    gap: 3.2rem;
+  }
+}
+.footer-item-link:link,
+.footer-item-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
 }

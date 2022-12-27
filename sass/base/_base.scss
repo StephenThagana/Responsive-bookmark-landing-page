@@ -45,19 +45,9 @@ body {
   grid-template-columns:
     [full-start] minmax(min-content, 14rem) [center-start] repeat(
       8,
-      [col-start] minmax(min-content, 14rem) [col-end]
+      [col-start] minmax(min-content, 15rem) [col-end]
     )
     [center-end] minmax(min-content, 14rem) [full-end];
-
-  // temp
-  height: 50rem;
 }
 
-// .main__grid {
-//   display: grid;
-//   grid-template-columns:
-//     [full-start] minmax(14rem, 1fr) [center-start] repeat(
-//       8,
-//       [col-start] minmax(min-content, 14rem) [col-end]
-//     )
-//     [center-end] minmax(14rem, 1fr) [full-end];
+
