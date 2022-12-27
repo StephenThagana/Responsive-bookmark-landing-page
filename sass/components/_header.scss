@@ -17,8 +17,6 @@
     gap: 3.2rem;
     list-style: none;
   }
-  &-item {
-  }
 }
 .nav__link-link:link,
 .nav__link-link:visited {
@@ -26,12 +24,23 @@
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
-  // color: var(--color-Grayish-Blue);
+  color: var(--color-Grayish-Blue);
+  transition: all 0.3s;
 }
-.nav__link-link.nav-login:link,
-.nav__link-link.nav-login:visited {
+.nav__link-link:hover,
+.nav__link-link:active {
+  color: var(--color-Soft-Red);
+}
+.nav__link-link.btn--nav:link,
+.nav__link-link.btn--nav:visited {
   padding: 0.2rem 2.4rem;
   border-radius: 7px;
   color: #fff;
   background-color: var(--color-Soft-Red);
+}
+.nav__link-link.btn--nav:hover,
+.nav__link-link.btn--nav:active {
+  box-shadow: inset 0 0 0 1px var(--color-Soft-Red);
+  color: var(--color-Soft-Red);
+  background-color: #fff;
 }

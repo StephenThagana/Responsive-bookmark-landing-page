@@ -29,6 +29,11 @@
     font-size: 1.6rem;
     color: var(--Very-Dark-Blue);
     font-weight: 500;
+    transition: all 0.3s;
+  }
+  &-link:hover,
+  &-link:active {
+    color: var(--color-Soft-Red);
   }
 }
 .answer__content {
