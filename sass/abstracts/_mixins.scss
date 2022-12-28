@@ -1,0 +1,51 @@
+//////////////////////////
+///MEDIA QUERIES
+
+/*
+//BREAKPOINTS
+0 - 600px:       -phone
+600px - 900px:   -tab-port
+900px - 1200px:  -tab-land
+1200 -1800px:    -normal styles
+1800px +    :     -big desltops
+
+$breakpoints
+-phone
+-tab-port
+-tab-land
+-big-desktops
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint ==(tab-land) {
+    @media (max-width: 75em) {
+      //tablet landscape(1200px)
+      @content;
+    }
+  }
+
+  @if $breakpoint ==(tab-port) {
+    @media (max-width: 56.875em) {
+      //tablet portrait(900px)
+      @content;
+    }
+  }
+  @if $breakpoint ==(mid-tab-port) {
+    @media (max-width: 47.5em) {
+      //tablet portrait(900px)
+      @content;
+    }
+  }
+  @if $breakpoint ==(phone) {
+    @media (max-width: 37.5em) {
+      //phone(600px)
+      @content;
+    }
+  }
+
+  @if $breakpoint ==(big-desktops) {
+    @media (min-width: 112.5em) {
+      //big desktops (1800px +)
+      @content;
+    }
+  }
+}

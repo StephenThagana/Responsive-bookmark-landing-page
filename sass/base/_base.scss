@@ -11,9 +11,24 @@
 html {
   // default browser font size = 16px so 10/16 =  62.5%
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(tab-port) {
+    font-size: 44%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .container {
   max-width: 55rem;
@@ -48,4 +63,16 @@ body {
       [col-start] minmax(min-content, 15rem) [col-end]
     )
     [center-end] minmax(min-content, 14rem) [full-end];
+
+  @include respond(tab-land) {
+    grid-template-columns:
+      [full-start] minmax(min-content, 3rem) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 15rem) [col-end]
+      )
+      [center-end] minmax(min-content, 3rem) [full-end];
+  }
+  @include respond(mid-tab-port) {
+    grid-template-columns: 1fr;
+  }
 }

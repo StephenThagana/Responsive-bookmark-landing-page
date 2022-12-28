@@ -21,6 +21,9 @@
 }
 
 .menu__content {
+  @include respond(mid-tab-port) {
+    grid-template-columns: 1fr;
+  }
   &-photo {
     display: flex;
     align-items: center;
@@ -46,6 +49,9 @@
     padding: 5.2rem;
     // display: none; animations cant work with display none
     display: none;
+    @include respond(mid-tab-port) {
+      text-align: center;
+    }
   }
 }
 .menu-img {

@@ -5,9 +5,19 @@
   // justify-items: center;
   padding: 5.6rem 0 7.2rem 0;
 
+  @include respond(mid-tab-port) {
+    grid-template-columns: 1fr;
+  }
+
   &-desc {
     padding: 0 0 0 7.2rem;
     margin-top: 3.2rem;
+
+    @include respond(mid-tab-port) {
+      grid-row: 2 / 3;
+      text-align: center;
+      padding: 0;
+    }
   }
   &-text {
     font-size: 1.6rem;
@@ -20,6 +30,14 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+
+    @include respond(mid-tab-port) {
+      grid-row: 1 / 2;
+      width: 100%;
+
+      overflow: visible;
+      text-align: end;
+    }
   }
   &-img-box::before {
     content: "";

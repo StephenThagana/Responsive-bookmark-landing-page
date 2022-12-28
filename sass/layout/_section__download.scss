@@ -13,6 +13,13 @@
   justify-content: space-evenly;
   gap: 3.2rem;
   padding: 0 3.2rem;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+  @include respond(mid-tab-port) {
+    flex-direction: column;
+  }
 }
 .extension-item {
   display: flex;
