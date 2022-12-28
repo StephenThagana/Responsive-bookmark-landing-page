@@ -34,6 +34,8 @@ tabsContainer.addEventListener("click", function (e) {
 
 const tabLink = document.querySelectorAll(".faq-item");
 const linkContent = document.querySelectorAll(".answer__content");
+const header = document.querySelector(".header");
+const btnNav = document.querySelector(".btn__mobile-nav");
 
 tabLink.forEach(function (link) {
   link.addEventListener("click", function (e) {
@@ -51,3 +53,34 @@ tabLink.forEach(function (link) {
     });
   });
 });
+
+//////////////////////////////////////////////////
+//MENU NAVIGATION
+btnNav.addEventListener("click", function (e) {
+  header.classList.toggle("nav-open");
+});
+
+///////////////////////////////////////////////
+//STICKY NAVIGATION: intersecrion observer api
+
+const sectionHome = document.querySelector(".section__home");
+const bodyEl = document.querySelector("body");
+
+const headerHeight = header.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    bodyEl.classList.add("sticky");
+  } else {
+    bodyEl.classList.remove("sticky");
+  }
+};
+
+const observer = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+
+observer.observe(sectionHome);

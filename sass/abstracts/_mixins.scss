@@ -31,7 +31,7 @@ $breakpoints
   }
   @if $breakpoint ==(mid-tab-port) {
     @media (max-width: 47.5em) {
-      //tablet portrait(900px)
+      //tablet portrait(760px)
       @content;
     }
   }

@@ -251,10 +251,34 @@ body {
   align-items: center;
   max-width: 130rem;
   padding: 0 7.2rem;
-  height: 6.5rem; }
+  height: 6.5rem;
+  position: relative; }
+  @media (max-width: 47.5em) {
+    .header {
+      padding: 0 2.4rem;
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15); } }
 
 .bookmark__logo {
   display: inline-block; }
+
+@media (max-width: 47.5em) {
+  .nav__link {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 85vh;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    z-index: 1;
+    transition: 0.3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden; } }
 
 .nav__link-list {
   display: flex;
@@ -262,6 +286,16 @@ body {
   justify-content: center;
   gap: 3.2rem;
   list-style: none; }
+  @media (max-width: 47.5em) {
+    .nav__link-list {
+      flex-direction: column; } }
+
+@media (max-width: 47.5em) {
+  .nav-open .nav__link {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0); } }
 
 .nav__link-link:link,
 .nav__link-link:visited {
@@ -288,6 +322,40 @@ body {
   box-shadow: inset 0 0 0 1px var(--color-Soft-Red);
   color: var(--color-Soft-Red);
   background-color: #fff; }
+
+.btn__mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none; }
+  @media (max-width: 47.5em) {
+    .btn__mobile-nav {
+      display: block;
+      z-index: 10; } }
+
+.mobile__nav-icon {
+  height: 3.25rem;
+  width: 3.25rem;
+  color: #333; }
+
+.mobile__nav-icon[name="close-outline"] {
+  display: none; }
+
+.nav-open .mobile__nav-icon[name="menu-outline"] {
+  display: none; }
+
+.nav-open .mobile__nav-icon[name="close-outline"] {
+  display: block; }
+
+.sticky .section__home .header {
+  position: fixed;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  width: 100%;
+  background-color: #fff;
+  z-index: 999; }
+
+.sticky .section__features {
+  margin-top: 6.5rem; }
 
 .section__download {
   grid-column: center-start / center-end;
@@ -346,6 +414,9 @@ body {
   margin: 0 auto; }
   .faq > * {
     border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  @media (max-width: 37.5em) {
+    .faq {
+      padding: 0 1.2rem; } }
   .faq__text {
     margin-bottom: 4.8rem; }
   .faq-box {

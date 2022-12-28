@@ -5,17 +5,60 @@
   max-width: 130rem;
   padding: 0 7.2rem;
   height: 6.5rem;
+  position: relative;
+
+  @include respond(mid-tab-port) {
+    padding: 0 2.4rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  }
 }
 .bookmark__logo {
   display: inline-block;
 }
 .nav__link {
+  @include respond(mid-tab-port) {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 85vh;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    z-index: 1;
+    transition: 0.3s ease-in;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // hide navigation
+    //  visual visibility
+    opacity: 0;
+    // hide from keyboard and mouse
+    pointer-events: none;
+    // hide from screen readers
+    visibility: hidden;
+  }
+
   &-list {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
     list-style: none;
+    @include respond(mid-tab-port) {
+      flex-direction: column;
+    }
+  }
+}
+.nav-open .nav__link {
+  @include respond(mid-tab-port) {
+    // show navigation
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
   }
 }
 .nav__link-link:link,
@@ -43,4 +86,44 @@
   box-shadow: inset 0 0 0 1px var(--color-Soft-Red);
   color: var(--color-Soft-Red);
   background-color: #fff;
+}
+
+////////////////////////////
+///Mobile navigation
+.btn__mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+
+  @include respond(mid-tab-port) {
+    display: block;
+    z-index: 10;
+  }
+}
+.mobile__nav-icon {
+  height: 3.25rem;
+  width: 3.25rem;
+  color: #333;
+}
+.mobile__nav-icon[name="close-outline"] {
+  display: none;
+}
+.nav-open .mobile__nav-icon[name="menu-outline"] {
+  display: none;
+}
+.nav-open .mobile__nav-icon[name="close-outline"] {
+  display: block;
+}
+////////////////////////////
+///STICKY NAVIGATION
+.sticky .section__home .header {
+  position: fixed;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+.sticky .section__features {
+  margin-top: 6.5rem;
 }
