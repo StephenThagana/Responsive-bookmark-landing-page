@@ -34,10 +34,17 @@ body {
   max-width: 55rem;
   margin: 0 auto;
   text-align: center;
+  @include respond(mid-tab-port) {
+    max-width: 65rem;
+    padding: 2.4rem;
+  }
 }
 .grid {
   display: grid;
   gap: 3.2rem;
+  @include respond(mid-tab-port) {
+    gap: 0;
+  }
 }
 .grid-col--2 {
   grid-template-columns: repeat(2, 1fr);
@@ -72,7 +79,7 @@ body {
       )
       [center-end] minmax(min-content, 3rem) [full-end];
   }
-  @include respond(mid-tab-port) {
-    grid-template-columns: 1fr;
+  @include respond(phone) {
+    display: block;
   }
 }

@@ -14,6 +14,11 @@
     justify-content: center;
     gap: 7.2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
   }
   &-item {
     border-bottom: 2px solid transparent;
@@ -30,7 +35,10 @@
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
-
+    @include respond(mid-tab-port) {
+      display: block;
+      text-align: center;
+    }
     &::before {
       content: "";
       display: block;
@@ -51,6 +59,10 @@
     display: none;
     @include respond(mid-tab-port) {
       text-align: center;
+    }
+    @include respond(phone) {
+      text-align: center;
+      padding: 0 2.4rem;
     }
   }
 }

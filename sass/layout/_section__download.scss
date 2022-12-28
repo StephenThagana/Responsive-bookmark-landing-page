@@ -28,6 +28,9 @@
   box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.15);
   padding: 2.4rem;
   border-radius: 9px;
+  @include respond(mid-tab-port) {
+    padding: 9.6rem;
+  }
 
   &--2 {
     transform: translateY(4rem);

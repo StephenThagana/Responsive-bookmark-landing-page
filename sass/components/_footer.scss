@@ -2,16 +2,27 @@
   grid-column: full-start / full-end;
   background-color: var(--Very-Dark-Blue);
   padding: 3.2rem 9.6rem;
+  @include respond(mid-tab-port) {
+    padding: 2.4rem 4.8rem;
+  }
 }
 .footer {
   &-box {
     display: flex;
     justify-content: space-between;
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
   &-link {
     display: flex;
     align-items: center;
     gap: 7.2rem;
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 3.2rem;
+      margin-bottom: 3.2rem;
+    }
   }
   &-img {
     filter: invert(1) hue-rotate(177deg);
@@ -27,6 +38,9 @@
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
+    // @include respond(phone) {
+    //   flex-direction: column;
+    // }
   }
 }
 .footer-item-link:link,

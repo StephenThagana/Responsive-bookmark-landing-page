@@ -7,6 +7,18 @@
   color: #fff;
   letter-spacing: 1.05;
 }
+.cta {
+  padding: 0 3.2rem;
+}
+.form {
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 3.2rem;
+  }
+}
 .form-input {
   padding: 0.8rem 2.4rem;
   border-radius: 7px;
